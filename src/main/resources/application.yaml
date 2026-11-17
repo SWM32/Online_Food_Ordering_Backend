@@ -1,3 +1,22 @@
 spring:
   application:
     name: cw3
+
+  datasource:
+    url: jdbc:mysql://localhost:3307/food_ordering_db?createDatabaseIfNotExist=true
+    username: root
+    password: Admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+    properties:
+      dialect: org.hibernate.dialect.MySQLDialect
+      "[format_sql]": true
+
+server:
+  port: 8080
+
