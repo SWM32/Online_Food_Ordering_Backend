@@ -36,6 +36,7 @@ public class FoodService {
         FoodItem foodItem = FoodItem.builder()
                 .name(request.getName().trim())
                 .description(request.getDescription())
+                .imageUrl(request.getImageUrl())
                 .price(request.getPrice())
                 .status(request.getStatus() != null ? request.getStatus() : FoodStatus.AVAILABLE)
                 .category(category)
@@ -96,6 +97,7 @@ public class FoodService {
 
         foodItem.setName(request.getName().trim());
         foodItem.setDescription(request.getDescription());
+        foodItem.setImageUrl(request.getImageUrl());
         foodItem.setPrice(request.getPrice());
         if (request.getStatus() != null) {
             foodItem.setStatus(request.getStatus());
@@ -132,6 +134,7 @@ public class FoodService {
                 .id(foodItem.getId())
                 .name(foodItem.getName())
                 .description(foodItem.getDescription())
+                .imageUrl(foodItem.getImageUrl())
                 .price(foodItem.getPrice())
                 .status(foodItem.getStatus())
                 .categoryId(category != null ? category.getId() : null)

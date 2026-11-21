@@ -17,6 +17,7 @@ public class FoodItemResponse {
     private Long id;
     private String name;
     private String description;
+    private String imageUrl;
     private BigDecimal price;
     private FoodStatus status;
     private Long categoryId;
